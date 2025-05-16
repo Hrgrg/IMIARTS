@@ -1,0 +1,79 @@
+import { Metadata } from "next";
+import Image from "next/image";
+
+const services = [
+  {
+    slug: "offset-printing",
+    name: "Offset Printing",
+    description: "Premium offset printing services for doctors, pharmaceutical companies, businesses, and startups across India. High-quality prints, fast turnaround, and expert support.",
+    keywords: "offset printing, premium printing, business printing, pharma printing, India",
+    image: "/images/hero-illustration.png",
+  },
+  {
+    slug: "web-development",
+    name: "Website Development",
+    description: "Modern, responsive website development for businesses, startups, and medical professionals. Boost your online presence with IMI ARTS.",
+    keywords: "website development, web design, responsive websites, business websites, India",
+    image: "/images/hero-illustration.png",
+  },
+  {
+    slug: "visual-aid-books",
+    name: "Visual Aid Books",
+    description: "Custom visual aid books for pharmaceutical companies and doctors. Enhance your presentations and marketing with high-impact visuals.",
+    keywords: "visual aid books, pharma marketing, doctor presentations, India",
+    image: "/images/hero-illustration.png",
+  },
+  {
+    slug: "multicolor-labels",
+    name: "Multicolor Labels",
+    description: "Vibrant, durable multicolor labels for products, packaging, and branding. Perfect for businesses and startups across India.",
+    keywords: "multicolor labels, product labels, packaging, branding, India",
+    image: "/images/hero-illustration.png",
+  },
+  {
+    slug: "medical-carton-box",
+    name: "Medical Carton Box",
+    description: "High-quality medical carton boxes for pharmaceutical and healthcare products. Secure, reliable, and customizable packaging solutions.",
+    keywords: "medical carton box, pharma packaging, healthcare packaging, India",
+    image: "/images/hero-illustration.png",
+  },
+];
+
+export async function generateStaticParams() {
+  return services.map((s) => ({ service: s.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { service: string } }): Promise<Metadata> {
+  const svc = services.find((s) => s.slug === params.service);
+  return {
+    title: `${svc?.name} | IMI ARTS` || "Service | IMI ARTS",
+    description: svc?.description,
+    keywords: svc?.keywords,
+    openGraph: {
+      title: `${svc?.name} | IMI ARTS` || "Service | IMI ARTS",
+      description: svc?.description,
+      images: [svc?.image || "/images/IMIlogo.png"],
+    },
+  };
+}
+
+export default function ServicePage({ params }: { params: { service: string } }) {
+  const svc = services.find((s) => s.slug === params.service);
+  if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
+  return (
+    <div className="max-w-4xl mx-auto py-16 px-4">
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        <Image src={svc.image} alt={svc.name} width={320} height={320} className="rounded-xl shadow-lg" />
+        <div>
+          <h1 className="text-4xl font-bold text-[#34486b] mb-4">{svc.name}</h1>
+          <p className="text-lg text-gray-700 mb-6">{svc.description}</p>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>Serving doctors, pharmaceutical companies, businesses, and startups across India</li>
+            <li>Expert support and fast turnaround</li>
+            <li>Custom solutions for your needs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+} 
