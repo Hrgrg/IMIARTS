@@ -40,13 +40,9 @@ export async function generateMetadata({ params }: { params: { location: string 
   };
 }
 
-type Props = {
-  params: { location: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-export default async function LocationPage({ params }: Props) {
-  const city = locationNames[params.location] || params.location;
+export default async function LocationPage({ params }: { params: Promise<{ location: string }> }) {
+  const awaitedParams = await params;
+  const city = locationNames[awaitedParams.location] || awaitedParams.location;
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
       <h1 className="text-4xl font-bold text-[#34486b] mb-4">Offset Printing & Web Development in {city}</h1>
