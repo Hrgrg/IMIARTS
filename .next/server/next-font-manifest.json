@@ -1,1 +1,47 @@
-{"pages":{},"app":{},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":false}
+{
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/GeistMono_UltraLight.p.a6bff3fd.woff2",
+      "static/media/Geist_Medium-s.p.8dde66c8.woff2",
+      "static/media/Geist_Black-s.p.c235b172.woff2",
+      "static/media/Geist_Thin-s.p.99eae537.woff2",
+      "static/media/Geist_Bold-s.p.3f3e8a8c.woff2",
+      "static/media/Geist_UltraBlack-s.p.ef5621ad.woff2",
+      "static/media/GeistMono_Thin.p.c71c0a35.woff2",
+      "static/media/GeistMono_Bold.p.372b098a.woff2",
+      "static/media/Geist_Light-s.p.7b9c7565.woff2",
+      "static/media/Geist_Regular-s.p.fc2ea952.woff2",
+      "static/media/Geist_UltraLight-s.p.14f52133.woff2",
+      "static/media/GeistMono_Medium.p.1441cb31.woff2",
+      "static/media/GeistMono_Light.p.7df30323.woff2",
+      "static/media/GeistMono_Black.p.55c366e3.woff2",
+      "static/media/GeistMono_Regular.p.ef0814dc.woff2",
+      "static/media/Geist_SemiBold-s.p.f54bbc1a.woff2",
+      "static/media/GeistMono_SemiBold.p.e457ea08.woff2",
+      "static/media/GeistMono_UltraBlack.p.d66b0372.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/GeistMono_UltraLight.p.a6bff3fd.woff2",
+      "static/media/Geist_Medium-s.p.8dde66c8.woff2",
+      "static/media/Geist_Black-s.p.c235b172.woff2",
+      "static/media/Geist_UltraBlack-s.p.ef5621ad.woff2",
+      "static/media/Geist_Thin-s.p.99eae537.woff2",
+      "static/media/Geist_Bold-s.p.3f3e8a8c.woff2",
+      "static/media/GeistMono_Bold.p.372b098a.woff2",
+      "static/media/GeistMono_Thin.p.c71c0a35.woff2",
+      "static/media/Geist_Light-s.p.7b9c7565.woff2",
+      "static/media/Geist_Regular-s.p.fc2ea952.woff2",
+      "static/media/Geist_UltraLight-s.p.14f52133.woff2",
+      "static/media/GeistMono_Medium.p.1441cb31.woff2",
+      "static/media/GeistMono_Light.p.7df30323.woff2",
+      "static/media/GeistMono_Black.p.55c366e3.woff2",
+      "static/media/GeistMono_Regular.p.ef0814dc.woff2",
+      "static/media/Geist_SemiBold-s.p.f54bbc1a.woff2",
+      "static/media/GeistMono_SemiBold.p.e457ea08.woff2",
+      "static/media/GeistMono_UltraBlack.p.d66b0372.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

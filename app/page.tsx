@@ -67,21 +67,14 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center z-10 mt-12 md:mt-0">
-          <div className="relative">
-            <Image
-              src="/images/hero-bg.jpg"
-              alt="Hero Background"
-              width={1920}
-              height={1080}
-              className="w-full h-[600px] object-cover"
-            />
-            <img
-              src="/images/hero-illustration.png"
-              alt="IMI ARTS Hero Illustration"
-              className="w-[500px] md:w-[600px] animate-float-bounce"
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-          </div>
+          <Image
+            src="/images/hero-illustration.png"
+            alt="IMI ARTS Hero Illustration"
+            width={600}
+            height={400}
+            className="w-[500px] md:w-[600px] animate-float-bounce"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
         </div>
         <style jsx global>{`
           @keyframes float-bounce {
