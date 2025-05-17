@@ -57,8 +57,9 @@ export async function generateMetadata({ params }: { params: { service: string }
   };
 }
 
-export default function ServicePage({ params }: { params: { service: string } }) {
-  const svc = services.find((s) => s.slug === params.service);
+export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {
+  const resolvedParams = await params;
+  const svc = services.find((s) => s.slug === resolvedParams.service);
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
