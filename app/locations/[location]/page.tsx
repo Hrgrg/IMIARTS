@@ -40,14 +40,12 @@ export async function generateMetadata({ params }: { params: { location: string 
   };
 }
 
-interface PageProps {
-  params: {
-    location: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
+type Props = {
+  params: { location: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default function LocationPage({ params }: PageProps) {
+export default async function LocationPage({ params }: Props) {
   const city = locationNames[params.location] || params.location;
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
