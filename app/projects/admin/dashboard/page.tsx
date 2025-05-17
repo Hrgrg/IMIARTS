@@ -17,8 +17,8 @@ const initialSubmissions = [
 
 export default function AdminDashboard() {
   const [tab, setTab] = useState("submissions");
-  const [submissions, setSubmissions] = useState([]);
-  const [adminUser, setAdminUser] = useState("admin");
+  const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [adminUser] = useState<AdminUser | null>(null);
   const [password, setPassword] = useState("admin123");
   const [oldPass, setOldPass] = useState("");
   const [newPass, setNewPass] = useState("");

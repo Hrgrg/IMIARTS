@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
 import Link from "next/link";
 import Navbar from "./Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         <title>IMI ARTS | Where Design Meets Perfection | Offset Printing & Web Development in India</title>
         <meta name="description" content="IMI ARTS offers premium offset printing, website development, visual aid books, multicolor labels, and medical carton box services for doctors, pharmaceutical companies, businesses, and startups across India. Elevate your brand with our expert solutions." />
@@ -41,7 +33,7 @@ export default function RootLayout({
         <meta name="twitter:image" content="/images/IMIlogo.png" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-[#f7fafd] min-h-screen flex flex-col overflow-x-hidden" style={{ fontFamily: 'Nunito, Arial, sans-serif' }}>
+      <body className={GeistSans.className} style={{ fontFamily: 'Nunito, Arial, sans-serif' }}>
         {/* Navbar */}
         <Navbar />
         <main className="flex-1 w-full">
@@ -52,7 +44,13 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <img src="/images/IMIlogo.png" alt="IMI ARTS Logo" className="w-8 h-8 rounded" />
+                <Image
+                  src="/images/IMIlogo.png"
+                  alt="IMI ARTS Logo"
+                  width={150}
+                  height={50}
+                  className="h-12 w-auto"
+                />
                 <span className="font-bold text-lg">IMI ARTS</span>
               </div>
               <p className="text-sm">Where Design Meets Perfection</p>
