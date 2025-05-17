@@ -57,10 +57,11 @@ export async function generateMetadata({ params }: { params: { service: string }
   };
 }
 
-export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {
-  const resolvedParams = await params;
-  const svc = services.find((s) => s.slug === resolvedParams.service);
+export default function ServicePage({ params }: { params: { service: string } }) {
+  const svc = services.find((s) => s.slug === params.service);
+  
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
+  
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
       <div className="flex flex-col md:flex-row items-center gap-8">
