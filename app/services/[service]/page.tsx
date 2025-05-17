@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import type { PageProps } from "next";
 
 const services = [
   {
@@ -40,8 +39,6 @@ const services = [
   },
 ];
 
-interface ServicePageProps extends PageProps<{ service: string }> {}
-
 export async function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));
 }
@@ -60,8 +57,9 @@ export async function generateMetadata({ params }: { params: { service: string }
   };
 }
 
-export default async function ServicePage({ params }: ServicePageProps) {
-  const svc = services.find((s) => s.slug === params.service);
+export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {
+  const resolvedParams = await params;
+  const svc = services.find((s) => s.slug === resolvedParams.service);
   
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
   
