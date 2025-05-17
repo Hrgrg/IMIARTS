@@ -14,10 +14,10 @@ const locationNames: Record<string, string> = {
 
 export const metadata: Metadata = {
   title: `IMI ARTS | Locations in India`,
-  description: `Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.`,\n  keywords: `IMI ARTS locations, offset printing India, web development India, printing services, packaging services`,
+  description: `Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.`, keywords: `IMI ARTS locations, offset printing India, web development India, printing services, packaging services`,
   openGraph: {
     title: `IMI ARTS | Locations in India`,
-    description: `Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.`,\n    images: ["/images/IMIlogo.png"],
+    description: `Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.`, images: ["/images/IMIlogo.png"],
   },
 };
 
