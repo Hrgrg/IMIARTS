@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from 'next/image';
 
 const locationNames: Record<string, string> = {
   chennai: "Chennai",
