@@ -1,0 +1,3 @@
+export default function Page({ params }: { params: { location: string } }) {
+  // ... existing code ...
+} 
