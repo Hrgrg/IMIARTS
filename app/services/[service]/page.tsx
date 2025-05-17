@@ -39,6 +39,7 @@ const services = [
   },
 ];
 
+
 export async function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));
 }
@@ -56,16 +57,12 @@ export async function generateMetadata({ params }: { params: { service: string }
     },
   };
 }
-interface PageProps {
-  params: {
-    service: string;
-  };
-}
 
-
-
-
-export default function ServicePage({ params }: PageProps) {
+export default function ServicePage({
+  params
+}: {
+  params: { service: string }
+}) {
   const svc = services.find((s) => s.slug === params.service);
   
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
