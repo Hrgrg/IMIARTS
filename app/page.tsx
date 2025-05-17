@@ -24,9 +24,30 @@ export default function Home() {
       answer: "We serve clients across India, with dedicated landing pages for each major city and region.",
     },
   ];
+  const [showVideo, setShowVideo] = useState(false);
 
   return (
     <div className="w-full min-h-screen bg-[#37517E] flex flex-col">
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div className="relative bg-white rounded-lg shadow-lg p-2 max-w-2xl w-full flex flex-col items-center">
+            <button
+              className="absolute top-2 right-4 text-3xl font-bold text-gray-700 hover:text-red-500 z-10"
+              onClick={() => setShowVideo(false)}
+              aria-label="Close video"
+            >
+              ×
+            </button>
+            <video
+              src="/videos/IMI_Atys_V1.mp4"
+              controls
+              autoPlay
+              className="w-full max-h-[70vh] rounded"
+            />
+          </div>
+        </div>
+      )}
       <section className="w-full min-h-screen bg-[#37517E] py-32 px-4 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden" style={{ fontFamily: 'Nunito, Arial, sans-serif' }}>
         <div className="flex-1 flex flex-col items-start justify-center text-white z-10">
           <h1 className="text-6xl font-extrabold mb-8 leading-tight tracking-wide">
@@ -37,12 +58,12 @@ export default function Home() {
           </p>
           <div className="flex gap-6 items-center">
             <a href="#services" className="bg-[#44b6e9] hover:bg-[#2196f3] text-white px-10 py-4 rounded-full font-bold text-xl shadow transition">Our services</a>
-            <a href="#" className="flex items-center gap-2 text-white font-bold text-xl hover:underline">
+            <button type="button" onClick={() => setShowVideo(true)} className="flex items-center gap-2 text-white font-bold text-xl hover:underline focus:outline-none">
               <span className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-white mr-2">
                 <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 23 14 5 25 5 3"></polygon></svg>
               </span>
               Watch Video
-            </a>
+            </button>
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center z-10 mt-12 md:mt-0">
@@ -69,12 +90,12 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#37517E]">About Us</h2>
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#37517E]">How we've grown from a small design studio to a comprehensive print and digital agency.</h3>
           <p className="text-gray-700 mb-4 max-w-lg">IMI ARTS started in 2003 as a small design studio in Chennai, India. Over the years, we have evolved into a full-service agency, offering premium offset printing and web development services to doctors, pharmaceutical companies, general businesses, and startups. Our mission is to empower businesses across India to enhance their online presence and achieve measurable growth.</p>
-          <a href="#" className="flex items-center gap-2 text-[#37517E] font-bold text-xl hover:underline mt-4">
+          <button type="button" disabled className="flex items-center gap-2 text-[#37517E] font-bold text-xl hover:underline mt-4 focus:outline-none opacity-50 cursor-not-allowed">
             <span className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#37517E] mr-2">
               <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 23 14 5 25 5 3"></polygon></svg>
             </span>
             Watch Video
-          </a>
+          </button>
         </div>
         <div className="flex-1 flex items-center justify-center">
           <img src="/images/wroking.jpg" alt="Working" className="rounded-xl shadow-lg w-[350px] md:w-[420px] object-cover" />

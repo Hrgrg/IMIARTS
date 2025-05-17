@@ -1,8 +1,3 @@
-__turbopack_load_page_chunks__("/_error", [
-  "static/chunks/[root-of-the-server]__8df7605f._.js",
-  "static/chunks/node_modules_react-dom_82bb97c6._.js",
-  "static/chunks/node_modules_a51498a5._.js",
-  "static/chunks/[root-of-the-server]__923cb372._.js",
-  "static/chunks/pages__error_5771e187._.js",
-  "static/chunks/pages__error_ec6747c0._.js"
-])
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a318a92aae7d076708646426916cf44a5767cf64bc5c8fdcced90f0a1364764
+size 350

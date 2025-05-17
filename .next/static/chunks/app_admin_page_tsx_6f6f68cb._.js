@@ -1,7 +1,3 @@
-(globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
-    script: typeof document === "object" ? document.currentScript : undefined,
-    chunks: [
-  "static/chunks/app_admin_page_tsx_9b891d59._.js"
-],
-    source: "dynamic"
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:935b4f92f27c0b7c53e6d695c8d833eac93fe4fe25bcb89af5286b0c47ecb7ca
+size 256

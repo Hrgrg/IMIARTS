@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore video files
+public/videos/
+public/videos/IMI_Atys_V1.mp4

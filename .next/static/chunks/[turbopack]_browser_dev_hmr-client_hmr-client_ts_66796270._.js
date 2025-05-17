@@ -1,7 +1,3 @@
-(globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
-    script: typeof document === "object" ? document.currentScript : undefined,
-    chunks: [
-  "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js"
-],
-    source: "dynamic"
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:a184076daafb7cdea17cf43a6e7350c47f3b63b3715f72c89a40d82ff3726dcd
+size 286

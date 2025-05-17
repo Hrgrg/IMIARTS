@@ -1,10 +1,3 @@
-(globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
-    script: typeof document === "object" ? document.currentScript : undefined,
-    chunks: [
-  "static/chunks/[root-of-the-server]__8df7605f._.js",
-  "static/chunks/node_modules_react-dom_82bb97c6._.js",
-  "static/chunks/node_modules_a51498a5._.js",
-  "static/chunks/[root-of-the-server]__923cb372._.js"
-],
-    source: "entry"
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7d13e697ae06409c68f5369de6b85e5db245f7d723607b0217e884933b93372
+size 414
