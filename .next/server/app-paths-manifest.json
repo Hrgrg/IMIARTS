@@ -4,5 +4,6 @@
   "/admin/page": "app/admin/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/projects/admin/page": "app/projects/admin/page.js"
+  "/projects/admin/page": "app/projects/admin/page.js",
+  "/projects/page": "app/projects/page.js"
 }

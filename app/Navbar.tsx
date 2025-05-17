@@ -18,7 +18,7 @@ export default function Navbar() {
         <Link href="/" className="hover:underline whitespace-nowrap">Home</Link>
         <Link href="#about" className="hover:underline whitespace-nowrap">About</Link>
         <Link href="#services" className="hover:underline whitespace-nowrap">Services</Link>
-        <Link href="/projects" className="hover:underline whitespace-nowrap">Project</Link>
+        <Link href="#project-process" className="hover:underline whitespace-nowrap">Project</Link>
         <Link href="#contact" className="hover:underline whitespace-nowrap">Contact</Link>
         <Link href="/admin" className="bg-[#44b6e9] text-white px-8 py-2 rounded-full font-semibold shadow hover:bg-blue-100 transition text-lg whitespace-nowrap text-center">Admin</Link>
       </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
           <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('/'); }}>Home</button>
           <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('#about'); }}>About</button>
           <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('#services'); }}>Services</button>
-          <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('/projects'); }}>Project</button>
+          <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('#project-process'); }}>Project</button>
           <button className="hover:underline whitespace-nowrap text-lg" onClick={() => { setMenuOpen(false); router.push('#contact'); }}>Contact</button>
         </div>,
         window.document.body
