@@ -57,11 +57,7 @@ export async function generateMetadata({ params }: { params: { service: string }
     },
   };
 }
-interface PageProps {
-  params: {
-    service: string;
-  };
-}
+
 
 export default function ServicePage({
   params
