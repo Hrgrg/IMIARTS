@@ -31,7 +31,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="IMI ARTS | Where Design Meets Perfection" />
         <meta name="twitter:description" content="Premium offset printing and web development for doctors, pharma, businesses, and startups across India." />
         <meta name="twitter:image" content="/images/IMIlogo.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+        {/* The Nunito font is handled via Tailwind CSS configuration */}
       </head>
       <body className={GeistSans.className} style={{ fontFamily: 'Nunito, Arial, sans-serif' }}>
         {/* Navbar */}

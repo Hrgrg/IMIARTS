@@ -2,19 +2,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-// Demo: In-memory contact submissions and password (replace with backend in production)
-const initialSubmissions = [
-  {
-    date: "May 12th, 2025 11:37 PM",
-    name: "ANIE VARSHA IJ",
-    email: "anievarsha@gmail.com",
-    phone: "9345878075",
-    service: "web",
-    message: "please reply",
-    status: "new",
-  },
-];
-
 export default function AdminDashboard() {
   const [tab, setTab] = useState("submissions");
   const [submissions, setSubmissions] = useState<Submission[]>([]);

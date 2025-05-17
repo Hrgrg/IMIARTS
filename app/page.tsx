@@ -90,7 +90,7 @@ export default function Home() {
       <section id="about" className="w-full flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-16 bg-white min-h-screen">
         <div className="flex-1 flex flex-col items-start justify-center mb-8 md:mb-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#37517E]">About Us</h2>
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#37517E]">How we've grown from a small design studio to a comprehensive print and digital agency.</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#37517E]">How we&apos;ve grown from a small design studio to a comprehensive print and digital agency.</h3>
           <p className="text-gray-700 mb-4 max-w-lg">IMI ARTS started in 2003 as a small design studio in Chennai, India. Over the years, we have evolved into a full-service agency, offering premium offset printing and web development services to doctors, pharmaceutical companies, general businesses, and startups. Our mission is to empower businesses across India to enhance their online presence and achieve measurable growth.</p>
           <button type="button" disabled className="flex items-center gap-2 text-[#37517E] font-bold text-xl hover:underline mt-4 focus:outline-none opacity-50 cursor-not-allowed">
             <span className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#37517E] mr-2">
@@ -100,7 +100,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <img src="/images/wroking.jpg" alt="Working" className="rounded-xl shadow-lg w-[350px] md:w-[420px] object-cover" />
+          <Image src="/images/wroking.jpg" alt="Working" width={420} height={300} className="rounded-xl shadow-lg w-[350px] md:w-[420px] object-cover" />
         </div>
       </section>
       {/* Services Section */}
@@ -140,7 +140,7 @@ export default function Home() {
             <span className="inline-block bg-[#1e90ff] text-white font-bold rounded-full px-4 py-2 text-lg shadow absolute right-8 bottom-8 z-20">18+ Years Experience</span>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <img src="/images/teamproject.jpg" alt="Team Project" className="rounded-xl shadow-lg w-[350px] md:w-[420px] object-cover" />
+            <Image src="/images/teamproject.jpg" alt="Team Project" width={420} height={300} className="rounded-xl shadow-lg w-[350px] md:w-[420px] object-cover" />
           </div>
         </div>
       </section>
@@ -186,7 +186,7 @@ export default function Home() {
         <AnimatedScrollBackground />
         <div className="bg-[#37517Ecc] rounded-xl p-10 flex flex-col items-center justify-center w-full max-w-2xl mx-auto z-10 relative">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">Ready to Transform Your Brand?</h2>
-          <p className="text-lg text-white mb-6 text-center">It's time to bring your vision to life with IMI ARTS. Reach out to us for a free consultation and discover how we can help your business stand out.</p>
+          <p className="text-lg text-white mb-6 text-center">It&apos;s time to bring your vision to life with IMI ARTS. Reach out to us for a free consultation and discover how we can help your business stand out.</p>
           <a href="#contact" className="bg-white text-[#37517E] px-8 py-3 rounded-full font-semibold shadow hover:bg-blue-100 transition">Get in Touch</a>
         </div>
       </section>
