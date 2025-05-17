@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 interface Props {
-  params: Promise<{ service: string }>;
+  params: { service: string };
 }
 
 const services = [
@@ -47,7 +47,7 @@ export async function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { service: string } }): Promise<Metadata> { 
+export async function generateMetadata({ params }: Props): Promise<Metadata> { 
   const svc = services.find((s) => s.slug === params.service);
   return {
     title: `${svc?.name} | IMI ARTS` || "Service | IMI ARTS",
@@ -61,8 +61,7 @@ export async function generateMetadata({ params }: { params: { service: string }
   };
 }
 
-export default async function ServicePage(props: Props) {
-  const params = await props.params;
+export default async function ServicePage({ params }: Props) {
   const svc = services.find((s) => s.slug === params.service);
   
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
