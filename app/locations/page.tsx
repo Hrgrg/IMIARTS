@@ -1,15 +1,17 @@
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "IMI ARTS | Locations in India",
-  description: "Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.",
-  keywords: "IMI ARTS locations, offset printing India, web development India, printing services, packaging services",
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: "IMI ARTS | Locations in India",
     description: "Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.",
-    images: ["/images/IMIlogo.png"],
-  },
-};
+    keywords: "IMI ARTS locations, offset printing India, web development India, printing services, packaging services",
+    openGraph: {
+      title: "IMI ARTS | Locations in India",
+      description: "Find IMI ARTS locations and premium offset printing, website development, and packaging services across India. Elevate your brand with IMI ARTS.",
+      images: ["/images/IMIlogo.png"],
+    },
+  };
+}
 
 export default function LocationsPage() {
   return (
