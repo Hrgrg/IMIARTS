@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-type PageProps = {
-  params: { service: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+interface PageProps {
+  params: {
+    service: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
 const services = [
   {
