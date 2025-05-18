@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 type Props = {
-  params: { service: string };
+  params: Promise<{ service: string }>;
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
@@ -49,7 +49,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> { 
-  const svc = services.find((s) => s.slug === params.service);
+  const resolvedParams = await params;
+  const svc = services.find((s) => s.slug === resolvedParams.service);
   return {
     title: `${svc?.name} | IMI ARTS` || "Service | IMI ARTS",
     description: svc?.description,
@@ -63,7 +64,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const svc = services.find((s) => s.slug === params.service);
+  const resolvedParams = await params;
+  const svc = services.find((s) => s.slug === resolvedParams.service);
   
   if (!svc) return <div className="p-12 text-center text-2xl">Service not found.</div>;
   
